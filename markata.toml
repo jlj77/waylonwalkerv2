@@ -2,25 +2,48 @@
 glob_patterns = "pages/**/*.md"
 output_dir = "markout"
 assets_dir = "static"
-hooks = ["default", "markata.plugins.publish_source"]
-cover_template = "static/cover-template.png"
-cover_font = "./.github/scripts/waterlilly-script.ttf"
-cover_font_color = "rgb(255,255,255)"
-url = "https://waylonwalker.com"
+hooks = ["markata.plugins.publish_source", "plugins.index", "default",]
+url = "https://dev.waylonwalker.com"
 title = "Waylon Walkers Digital Garden"
 description = "Waylon Walkers Digital Garden"
 rss_description = "Waylon Walkers posts"
 author_name = "Waylon Walker"
-author_email = "waylon@waylonwlaker.com"
+author_email = "waylon@waylonwalaker.com"
 icon = "8bitcc.png"
 lang = "en"
 post_template = "pages/templates/post_template.html"
 theme_color = "#322D39"
 background_color = "#B73CF6"
-start_url = "/sample"
+start_url = "/"
 site_name = "Waylon Walker"
 short_name = "ww"
 display = "minimal-ui"
+archive_template="pages/templates/archive_template.html"
+twitter_card = "summary_large_image"
+twitter_creator = "@_waylonwalker"
+twitter_site = "@_waylonwalker"
+
+
+[[markata.covers]]
+name=''
+template = "static/cover-template.png"
+font = "./.github/scripts/waterlilly-script.ttf"
+font_color = "rgb(255,255,255)"
+
+[[markata.covers]]
+name='-og'
+template = "static/og-template.png"
+font = "./.github/scripts/waterlilly-script.ttf"
+font_color = "rgb(255,255,255)"
+# text_key = 'description'
+text_font = "./static/JosefinSans-Regular.ttf"
+text_font_color = "rgb(200,200,200)"
+
+[[markata.covers]]
+name='-hashnode'
+template = "static/hashnode-template.png"
+font = "./.github/scripts/waterlilly-script.ttf"
+font_color = "rgb(255,255,255)"
 
 [[markata.seo]]
 name = "og:type"
@@ -36,3 +59,9 @@ content = "Waylon Walker"
 name = "og:site_name"
 property = "og:site_name"
 content = "Waylon Walker"
+
+[[markata.seo]]
+name = "theme-color"
+content="#322D39"
+
+
